@@ -1,0 +1,267 @@
+:root {
+  --color-sidebar-bg: #f2f2f2;
+  --color-sidebar-border: #e2e2e2;
+  --color-sidebar-shadow: rgba(0, 0, 0, 0.1);
+  --color-sidebar-text: #333333;
+  --color-sidebar-active-text: #ffffff;
+  --color-sidebar-item-1-bg: #ffebcd;
+  --color-sidebar-item-2-bg: #add8e6;
+  --color-sidebar-item-3-bg: #90ee90;
+  --color-sidebar-item-4-bg: #ffb6c1;
+  --color-sidebar-item-5-bg: #ffe4e1;
+  --color-sidebar-item-6-bg: #ffdead;
+  --color-sidebar-item-7-bg: #d3d3d3;
+  --color-sidebar-item-1-hover: #ffe4b5;
+  --color-sidebar-item-2-hover: #87cefa;
+  --color-sidebar-item-3-hover: #98fb98;
+  --color-sidebar-item-4-hover: #ff69b4;
+  --color-sidebar-item-5-hover: #ffcccb;
+  --color-sidebar-item-6-hover: #f5deb3;
+  --color-sidebar-item-7-hover: #c0c0c0;
+  --color-sidebar-item-1-active: #ff7f50;
+  --color-sidebar-item-2-active: #4682b4;
+  --color-sidebar-item-3-active: #32cd32;
+  --color-sidebar-item-4-active: #ff1493;
+  --color-sidebar-item-5-active: #ff6347;
+  --color-sidebar-item-6-active: #deb887;
+  --color-sidebar-item-7-active: #a9a9a9;
+  --color-chatbot-icon-bg: #007bff;
+  --color-chatbot-icon-bg-hover: #0056b3;
+  --color-chatbot-popup-bg: #ffffff;
+  --color-chatbot-popup-border: #dddddd;
+  --color-chatbot-popup-shadow: rgba(0, 0, 0, 0.1);
+  --color-chat-history-margin-bottom: 10px;
+  --color-chat-history-max-height: 250px;
+  --color-chat-message-padding: 8px;
+  --color-chat-message-border-radius: 5px;
+  --color-chat-message-user-bg: #e1f5fe;
+  --color-chat-message-bot-bg: #f1f1f1;
+  --color-input-border: #dddddd;
+  --color-input-border-radius: 4px;
+  --color-button-bg: #007bff;
+  --color-button-bg-hover: #0056b3;
+  --color-button-text: #ffffff;
+}
+
+.sidebar-container {
+  width: 250px;
+  background-color: var(--color-sidebar-bg);
+  padding: 15px;
+  border-right: 1px solid var(--color-sidebar-border);
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  box-shadow: 2px 0 15px var(--color-sidebar-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.sidebar-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--color-sidebar-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 32px);
+}
+
+.item-1 {
+  background-color: var(--color-sidebar-item-1-bg);
+}
+
+.item-2 {
+  background-color: var(--color-sidebar-item-2-bg);
+}
+
+.item-3 {
+  background-color: var(--color-sidebar-item-3-bg);
+}
+
+.item-4 {
+  background-color: var(--color-sidebar-item-4-bg);
+}
+
+.item-5 {
+  background-color: var(--color-sidebar-item-5-bg);
+}
+
+.item-6 {
+  background-color: var(--color-sidebar-item-6-bg);
+}
+
+.item-7 {
+  background-color: var(--color-sidebar-item-7-bg);
+}
+
+.item-1:hover {
+  background-color: var(--color-sidebar-item-1-hover);
+}
+
+.item-2:hover {
+  background-color: var(--color-sidebar-item-2-hover);
+}
+
+.item-3:hover {
+  background-color: var(--color-sidebar-item-3-hover);
+}
+
+.item-4:hover {
+  background-color: var(--color-sidebar-item-4-hover);
+}
+
+.item-5:hover {
+  background-color: var(--color-sidebar-item-5-hover);
+}
+
+.item-6:hover {
+  background-color: var(--color-sidebar-item-6-hover);
+}
+
+.item-7:hover {
+  background-color: var(--color-sidebar-item-7-hover);
+}
+
+.sidebar-item.active {
+  font-weight: bold;
+  color: var(--color-sidebar-active-text);
+}
+
+.item-1.active {
+  background-color: var(--color-sidebar-item-1-active);
+}
+
+.item-2.active {
+  background-color: var(--color-sidebar-item-2-active);
+}
+
+.item-3.active {
+  background-color: var(--color-sidebar-item-3-active);
+}
+
+.item-4.active {
+  background-color: var(--color-sidebar-item-4-active);
+}
+
+.item-5.active {
+  background-color: var(--color-sidebar-item-5-active);
+}
+
+.item-6.active {
+  background-color: var(--color-sidebar-item-6-active);
+}
+
+.item-7.active {
+  background-color: var(--color-sidebar-item-7-active);
+}
+
+.sidebar-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.chatbot-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-chatbot-icon-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-icon:hover {
+  background-color: var(--color-chatbot-icon-bg-hover);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-icon:hover {
+  background-color: var(--color-chatbot-icon-bg-hover);
+}
+
+.chatbot-icon img {
+  width: 80%;
+  height: auto;
+}
+
+.chatbot-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: var(--color-chatbot-popup-bg);
+  border: 1px solid var(--color-chatbot-popup-border);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px var(--color-chatbot-popup-shadow);
+  z-index: 1000;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.chat-history {
+  margin-bottom: var(--color-chat-history-margin-bottom);
+  max-height: var(--color-chat-history-max-height);
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin: 5px 0;
+  padding: var(--color-chat-message-padding);
+  border-radius: var(--color-chat-message-border-radius);
+}
+
+.chat-message.user {
+  background-color: var(--color-chat-message-user-bg);
+  text-align: right;
+}
+
+.chat-message.bot {
+  background-color: var(--color-chat-message-bot-bg);
+  text-align: left;
+}
+
+input {
+  width: calc(100% - 50px);
+  padding: 8px;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--color-input-border-radius);
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 8px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: var(--color-input-border-radius);
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-button-bg-hover);
+}

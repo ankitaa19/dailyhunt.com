@@ -1,0 +1,28 @@
+/* src/components/SportsNewsSection.css */
+
+.sports-news-section {
+    padding: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px 0;
+}

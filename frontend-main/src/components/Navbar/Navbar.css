@@ -1,0 +1,248 @@
+:root {
+  /* Color variables */
+  --color-navbar-gradient-start: #7699b1;
+  --color-navbar-gradient-end: #094d59;
+  --color-navbar-text: #ffffff;
+  --color-navbar-button-bg: transparent;
+  --color-navbar-button-text: #ffffff;
+  --color-navbar-button-hover-bg: rgba(255, 255, 255, 0.2);
+  --color-navbar-button-border-radius: 30px;
+  --color-navbar-button-padding: 10px 20px;
+  --color-navbar-button-font-size: 16px;
+  --color-navbar-button-font-weight: bold;
+  --color-navbar-button-hover-transform: translateY(-2px);
+  --color-navbar-input-bg: rgba(255, 255, 255, 0.1);
+  --color-navbar-input-border: rgba(255, 255, 255, 0.5);
+  --color-navbar-input-placeholder: rgba(255, 255, 255, 0.7);
+  --color-navbar-input-focus-bg: #ffffff;
+  --color-navbar-input-focus-text: #2e2e2e;
+  --color-navbar-input-focus-border: #e6cc7d;
+  --color-navbar-gold: #ffc107;
+  --color-navbar-gold-hover: #ffb300;
+  --color-navbar-text-dark: #2e2e2e;
+  --color-modal-gradient-start: #12d8fa;
+  --color-modal-gradient-end: #1fa2ff;
+  --color-modal-text: #ffffff;
+  --color-body-bg: #f4f4f4;
+  --color-body-text: #2e2e2e;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, var(--color-navbar-gradient-start), var(--color-navbar-gradient-end));
+  color: var(--color-navbar-text);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+nav img {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+nav img:hover {
+  transform: rotate(360deg);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-menu button {
+  background: var(--color-navbar-button-bg);
+  color: var(--color-navbar-button-text);
+  font-size: var(--color-navbar-button-font-size);
+  font-weight: var(--color-navbar-button-font-weight);
+  padding: var(--color-navbar-button-padding);
+  border: 2px solid transparent;
+  border-radius: var(--color-navbar-button-border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu button:hover {
+  background: var(--color-navbar-button-hover-bg);
+  transform: var(--color-navbar-button-hover-transform);
+}
+
+.nav-menu div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-menu input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-navbar-input-border);
+  background: var(--color-navbar-input-bg);
+  color: var(--color-navbar-text);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu input::placeholder {
+  color: var(--color-navbar-input-placeholder);
+}
+
+.nav-menu input:focus {
+  background: var(--color-navbar-input-focus-bg);
+  color: var(--color-navbar-input-focus-text);
+  transform: scale(1.1);
+  border-color: var(--color-navbar-input-focus-border);
+}
+
+.nav-menu button:last-child {
+  padding: 10px 20px;
+  background: var(--color-navbar-gold);
+  color: var(--color-navbar-text-dark);
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-menu button:last-child:hover {
+  background: var(--color-navbar-gold-hover);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: var(--color-navbar-gold);
+  color: var(--color-navbar-text-dark);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nav-actions button:hover {
+  background: var(--color-navbar-gold-hover);
+  transform: scale(1.1);
+}
+
+.nav-actions img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, var(--color-modal-gradient-start), var(--color-modal-gradient-end));
+  padding: 30px;
+  border-radius: 20px;
+  width: 400px;
+  text-align: center;
+  color: var(--color-modal-text);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--color-modal-text);
+  text-transform: uppercase;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-modal-text);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-content input:focus {
+  background: var(--color-navbar-input-focus-bg);
+  color: var(--color-navbar-input-focus-text);
+  transform: scale(1.05);
+  border-color: var(--color-navbar-gold);
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: var(--color-navbar-gold);
+  color: var(--color-navbar-text-dark);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: var(--color-navbar-gold-hover);
+  transform: scale(1.1);
+}
+
+body {
+  padding-top: 80px;
+  font-family: 'Roboto', sans-serif;
+  background: var(--color-body-bg);
+  color: var(--color-body-text);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu input {
+    width: 100%;
+  }
+}

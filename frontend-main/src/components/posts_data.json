@@ -1,0 +1,39 @@
+{
+    "posts": {
+      "postId1": {
+        "title": "Post Title 1",
+        "content": "This is the content of Post 1",
+        "likes": {
+          "userId1": true,
+          "userId2": true
+        },
+        "comments": {
+          "commentId1": {
+            "userId": "userId1",
+            "text": "Great post!",
+            "timestamp": "2024-12-19T12:00:00Z"
+          },
+          "commentId2": {
+            "userId": "userId2",
+            "text": "Thanks for sharing!",
+            "timestamp": "2024-12-19T12:05:00Z"
+          }
+        }
+      },
+      "postId2": {
+        "title": "Post Title 2",
+        "content": "This is the content of Post 2",
+        "likes": {
+          "userId3": true
+        },
+        "comments": {
+          "commentId1": {
+            "userId": "userId3",
+            "text": "Nice post!",
+            "timestamp": "2024-12-19T12:10:00Z"
+          }
+        }
+      }
+    }
+  }
+  
